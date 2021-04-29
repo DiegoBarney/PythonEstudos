@@ -1,12 +1,11 @@
 
-def JogoForca(palavras):
+def JogoForca(palavraForca):
     print("*****************************")
     print("Bem vindo ao jogo da forca")
     print("*****************************")
 
     acertou = False
     enforcou = False
-    palavraForca = "pedra"
     index = 0
     forca = ["_" for palavra in palavraForca]
     erros = 0

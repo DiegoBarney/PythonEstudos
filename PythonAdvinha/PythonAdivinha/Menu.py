@@ -1,5 +1,6 @@
 import PythonAdivinha
 import PythonForca
+import random
 
 #PythonAdivinha.JogoAdvinha()
 
@@ -16,14 +17,16 @@ arquivo = open("palavras.txt", "r")
 
 palavras = arquivo.readlines()
 
-palavrasnew = []
+palavrasNew = []
 
 for palavra in palavras:
-    palavrasnew.append(palavra.strip())
+    palavrasNew.append(palavra.strip())
 
 arquivo.close()
 
-PythonForca.JogoForca(palavrasnew)
+posicao = random.randrange(0, len(palavrasNew));
+
+PythonForca.JogoForca(palavrasNew[posicao])
 #soma = PythonAdivinha.somar(1,5)
 
 #print("Soma = ", soma);
