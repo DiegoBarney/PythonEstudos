@@ -76,6 +76,6 @@ def gerar_palavra_aleatoria():
 
 
 if (__name__ == "__main__"):
-    JogoAdvinha()     
+    jogo_forca()     
                
          

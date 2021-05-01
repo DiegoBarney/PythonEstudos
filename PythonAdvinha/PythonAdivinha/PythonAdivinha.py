@@ -1,37 +1,37 @@
 import random
 
-def JogoAdvinha():
+def jogo_advinha():
     print("*****************************")
     print("Bem vindo ao jogo de adivinha")
     print("*****************************")
 
     tentativas = 0
-    numeroUsuario = 0
-    numeroAleatorio = 0
+    numero_usuario = 0
+    numero_aleatorio = 0
 
 
     #while((tentativas < 3) & (numeroUsuario != 10) ):
     for tentativas in range(1, 4):
 
-        numeroAleatorio = random.randrange(0, 100)
+        numero_aleatorio = random.randrange(0, 100)
 
-        numeroUsuario = input("Digite seu numero entre 1 e 100: ")
+        numero_usuario = input("Digite seu numero entre 1 e 100: ")
 
-        print("Numero do usuario = ", numeroUsuario)
+        print("Numero do usuario = ", numero_usuario)
 
         try:
-            numeroUsuario = int(numeroUsuario)
+            numero_usuario = int(numero_usuario)
         
-            if(numeroUsuario < 0 or numeroUsuario > 100):
+            if(numero_usuario < 0 or numero_usuario > 100):
                 raise Exception("Numero fora do padrao")
 
-            if(numeroUsuario == numeroAleatorio):
+            if(numero_usuario == numero_aleatorio):
                 print("Voce Acertou")
                 break
             else:
-                if(numeroUsuario > numeroAleatorio):
+                if(numero_usuario > numero_aleatorio):
                     print("Voce Errou, chutou um numero maior")
-                if(numeroUsuario < numeroAleatorio):
+                if(numero_usuario < numero_aleatorio):
                     print("Voce Errou, chutou um numero menor")
 
 
@@ -43,5 +43,5 @@ def somar(a, b):
       
 
 if (__name__ == "__main__"):
-    JogoAdvinha()
+    jogo_advinha()
 
