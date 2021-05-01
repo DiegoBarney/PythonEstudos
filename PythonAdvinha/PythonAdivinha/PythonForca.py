@@ -1,8 +1,11 @@
+import random
 
-def JogoForca(palavraForca):
-    print("*****************************")
-    print("Bem vindo ao jogo da forca")
-    print("*****************************")
+def jogo_forca():
+
+    imprime_intro_jogo()
+
+    palavraForca = gerar_palavra_aleatoria()
+
 
     acertou = False
     enforcou = False
@@ -29,7 +32,6 @@ def JogoForca(palavraForca):
         if copia == forca:
             erros = erros +1
 
-
         if erros >= 5:
             print("voce perdeu!!")
             enforcou = True
@@ -38,6 +40,39 @@ def JogoForca(palavraForca):
         print("Forca: ", forca) 
 
         acertou = not "_" in  forca
+
+
+def imprime_intro_jogo():
+    print("*****************************")
+    print("Bem vindo ao jogo da forca")
+    print("*****************************")
+
+def gravar_palavras_arquivo():
+    arquivo = open("palavras.txt", "w")
+    arquivo.write("manga\n");
+    arquivo.write("pera\n");
+    arquivo.write("uva\n");
+    arquivo.write("jabuticaba\n");
+    arquivo.close()
+
+def capturar_palavras_arquivo():
+    arquivo = open("palavras.txt", "r")
+
+    palavras = arquivo.readlines()
+
+    palavras_new = []
+
+    for palavra in palavras:
+        palavras_new.append(palavra.strip())
+
+    arquivo.close()
+
+    return palavras_new
+
+def gerar_palavra_aleatoria():
+    palavras_new = capturar_palavras_arquivo()
+    posicao = random.randrange(0, len(palavras_new))
+    return palavras_new[posicao]
 
 
 if (__name__ == "__main__"):
