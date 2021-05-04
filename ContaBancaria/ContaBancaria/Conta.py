@@ -17,5 +17,12 @@ class Conta:
         if valor > 0:
             self.__saldo += valor
 
+    def transferir(self, contaDestino, valor):
+        if valor < self.__saldo:
+            self.sacar(valor)
+            contaDestino.depositar(valor)
+
     def extrato_conta(self):
         print("Titular = {0}, Conta = {1}, Agencia = {2}, Saldo = {3}".format(self.__titular, self.__conta, self.__agencia, self.__saldo))
+
+   
