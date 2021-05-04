@@ -31,19 +31,20 @@ class Conta:
     def get_agencia(self):
         return self.__agencia
 
-    @property
-    def titular(self):
-        return self.__titular
 
-    @titular.setter
-    def titular(self, titular):
-       self.__titular = titular.title()
+    def get_titular(self):
+        return self.__titular
 
     def get_conta(self):
         return self.__conta
 
-    def get_limite(self):
+    @property
+    def limite(self):
         return self.__limite
 
-    def set_limite(self, novoLimite):
-        self.__limite = novoLimite
+    @limite.setter
+    def limite(self, novoLimite):
+        if novoLimite < 0:
+            raise Exception("Limite não pode ser menor que 0")
+        else:
+            self.__limite = novoLimite

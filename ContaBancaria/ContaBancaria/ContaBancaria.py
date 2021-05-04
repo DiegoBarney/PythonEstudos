@@ -7,8 +7,8 @@ cont._Conta__conta = 1
 
 
 cont.transferir(cont2,50)
-#cont.titular = "joao"
-print(cont.titular)
+cont.limite = 500
+
 cont.extrato_conta()
 cont2.extrato_conta()
 
