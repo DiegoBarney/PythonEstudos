@@ -28,6 +28,9 @@ class Programa():
     @nome.setter
     def nome(self, novo_nome):
         self._nome = novo_nome.title()
+        
+    def __str__(self):
+        return "Nome: {0} \nAno = {1}".format(self._nome, self._ano)
 
 
 
