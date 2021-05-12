@@ -2,6 +2,8 @@ import Serie
 import Filme
 import Playlist
 import Programa
+from collections.abc import Sized
+
 
 vingadores = Filme.Filme("vingadores guerra infinita", 2018, 160)
 vingadores.dar_like()
