@@ -55,8 +55,9 @@ def porcentagens_de_frequencia_de_palavras(texto):
 
     mais_comuns = proporcao.most_common()
 
-    for letra, valor in mais_comuns:
-        print(letra, "==>", valor*100)
+    for palavra, valor in mais_comuns:
+        print("{} => {:.2f}%".format(palavra, valor * 100))
+
 
 
 def porcentagens_de_frequencia_de_caracteres(texto):
@@ -71,6 +72,6 @@ def porcentagens_de_frequencia_de_caracteres(texto):
     mais_comuns = proporcao.most_common(10)
 
     for letra, valor in mais_comuns:
-        print(letra, "==>", valor*100)
+        print("{} => {:.2f}%".format(letra, valor * 100))
 
 porcentagens_de_frequencia_de_palavras(texto2)
