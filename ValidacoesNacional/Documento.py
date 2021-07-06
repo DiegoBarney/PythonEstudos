@@ -1,3 +1,4 @@
+
 class Documento:
     def __init__(self, doc):
         if (len(str(doc)) == 11):
