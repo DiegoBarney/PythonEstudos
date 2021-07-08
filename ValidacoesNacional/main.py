@@ -3,6 +3,6 @@ from buscaEndereco import buscaEndereco
 import requests
 
 end = buscaEndereco("13318000")
-dados = end.retorna_dados_adicionais()
+bairro, cidade, estado = end.retorna_dados_adicionais()
 
-print(dados)
+print(bairro, cidade, estado)

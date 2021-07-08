@@ -19,7 +19,8 @@ class buscaEndereco:
 
     def retorna_dados_adicionais(self):
         retorno = requests.get('https://viacep.com.br/ws/' + self.cep + '/json')
-        return retorno.text
+        dados = retorno.json()
+        return (dados['bairro'], dados['localidade'], dados['uf'])
 
     def format_cep(self):
         return "{}-{}".format(self.cep[:5],self.cep[5:])
