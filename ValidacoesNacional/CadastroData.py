@@ -1,10 +1,8 @@
-
-from datetime import datetime
-
+from datetime import datetime, timedelta
 
 class Cadastro:
     def __init__(self):
-        data_cadastro = datetime.today()
+        self.data_cadastro = datetime.today()
 
 def tempo_cadastro(self):
     agora = datetime.today() + timedelta(days=15, minutes=20,seconds=30)
@@ -37,8 +35,3 @@ class DatasBr:
     def format_data(self):
         data_formatada = self.momento_cadastro.strftime("%d/%m/%Y %H:%M")
         print(data_formatada)
-
-
-
-cadastro = DatasBr()
-cadastro.format_data()
